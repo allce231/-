@@ -5,3 +5,11 @@
     2, var t = new Date().getTime();
     3, var t = new Date().valueOf();
     4, var t = +new Date();
+
+####二、javascript判断是否为数组
+    var toString = Object.prototype.toString;
+        toString.call("") // [object String];
+        toString.call([]) // [object Array];
+        toString.call(function(){}) // [object Function];
+        toString.call(undefined) // [object Undefined];
+        toString.call(null) // [object Null];
