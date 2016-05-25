@@ -13,3 +13,16 @@
         toString.call(function(){}) // [object Function];
         toString.call(undefined) // [object Undefined];
         toString.call(null) // [object Null];
+
+####三、jQuery 插件常用写法
+    
+    (function($){
+        var defaults = {
+            //...
+        };
+        
+        $.fn.test = function(options){
+            var opt = $.extend(defaults,options);
+        }
+    })(jQuery);
+    
